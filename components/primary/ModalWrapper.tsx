@@ -26,7 +26,7 @@ export const CentredModalWrapper: FC<
       closeModal={closeModal}
       className="relative z-[1000] mx-auto mt-auto h-auto w-full overflow-y-auto rounded-t-[40px] bg-neutral-0 sm:my-auto sm:max-h-[90vh] sm:w-auto sm:rounded-b-[40px]"
     >
-      <div>
+      <div className="lg:min-w-[522px]">
         {!hideHeader && (
           <div className="sticky inset-0 top-0 z-[910] flex w-full justify-between bg-neutral-0 p-6 align-middle">
             <span className="my-auto">

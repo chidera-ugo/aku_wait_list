@@ -3,17 +3,23 @@ import Link from 'next/link';
 import { CentredModalWrapper } from 'components/primary/ModalWrapper';
 import { useState } from 'react';
 import { JoinWaitlistModal } from 'components/modals/JoinWaitlistModal';
+import { JoinedWaitlistModal } from 'components/modals/JoinedWaitlistModal';
 
 export const Header = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState('');
 
   return (
     <header className="sticky inset-0 z-[800] h-[88px] border-b border-neutral-50 bg-neutral-200 bg-opacity-80 backdrop-blur-lg md:h-[104px]">
       <CentredModalWrapper
-        showModal={showModal}
-        closeModal={() => setShowModal(false)}
+        showModal={!!showModal}
+        closeModal={() => setShowModal('')}
       >
-        <JoinWaitlistModal />
+        {showModal === 'join-waitlist' && (
+          <JoinWaitlistModal
+            onSuccess={() => setShowModal('joined-waitlist')}
+          />
+        )}
+        {showModal === 'joined-waitlist' && <JoinedWaitlistModal />}
       </CentredModalWrapper>
 
       <nav className="x-between container h-full">
@@ -30,7 +36,7 @@ export const Header = () => {
         </Link>
 
         <button
-          onClick={() => setShowModal(true)}
+          onClick={() => setShowModal('join-waitlist')}
           className="primary-button my-auto"
         >
           Join Waitlist

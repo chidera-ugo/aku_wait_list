@@ -22,8 +22,16 @@
     @apply flex justify-between align-middle;
   }
 
+  .x-center {
+    @apply flex justify-center align-middle;
+  }
+
   .y-center {
     @apply flex flex-col justify-center align-middle;
+  }
+
+  .y-between {
+    @apply flex flex-col justify-between align-middle;
   }
 
   .smooth {
