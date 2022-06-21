@@ -19,7 +19,7 @@ export const JoinWaitlistModal: FC<Props> = ({ onSuccess }) => {
       </p>
 
       <div className="mx-auto w-full pt-[27px] sm:w-[395px] mobile:w-[320px] ">
-        <JoinQueueForm onSuccess={onSuccess} />
+        <JoinQueueForm onSuccess={onSuccess} source="modal" />
       </div>
     </div>
   );
