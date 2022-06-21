@@ -14,8 +14,19 @@ export const JoinedWaitlistModal = () => {
       </p>
 
       <p className="x-center mt-[38px] text-[15px] font-semibold leading-[-0.01em] text-neutral-800">
-        <span>Follow @aku.africa on</span>
-        <span className="mx-[9px] my-auto">
+        <a
+          href="https://twitter.com/aku.africa"
+          target="_blank"
+          rel="noreferrer noopenner"
+        >
+          Follow @aku.africa on
+        </a>
+        <a
+          href="https://twitter.com/aku.africa"
+          target="_blank"
+          rel="noreferrer noopenner"
+          className="mx-[9px] my-auto"
+        >
           <svg
             width="17"
             height="14"
@@ -28,7 +39,7 @@ export const JoinedWaitlistModal = () => {
               fill="#00C3FF"
             />
           </svg>
-        </span>
+        </a>
         <span>for updates</span>
       </p>
     </div>

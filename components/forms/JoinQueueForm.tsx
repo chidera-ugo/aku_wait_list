@@ -35,6 +35,7 @@ export const JoinQueueForm: FC<Props> = ({ onSuccess }) => {
           }
         }}
         value={email}
+        autoFocus
         inputMode="email"
         type="email"
         className={`primary-input py-2 px-2.5 pl-4 pr-[132px] font-medium tracking-[0.2px] text-primary-navy sm:pr-[172px] sm:pl-5 ${
