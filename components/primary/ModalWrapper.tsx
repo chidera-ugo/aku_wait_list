@@ -8,7 +8,7 @@ type ModalProps = JSX.IntrinsicElements['div'] & {
   closeModal?: () => void;
 };
 
-type CentredModalWrapperProps = {
+type ModalWrapperProps = {
   closeModal?: () => void;
   showModal: boolean;
   title?: string;
@@ -16,9 +16,14 @@ type CentredModalWrapperProps = {
   hideHeader?: boolean;
 };
 
-export const CentredModalWrapper: FC<
-  PropsWithChildren<CentredModalWrapperProps>
-> = ({ children, closeModal, showModal, title, subTitle, hideHeader }) => {
+export const CentredModalWrapper: FC<PropsWithChildren<ModalWrapperProps>> = ({
+  children,
+  closeModal,
+  showModal,
+  title,
+  subTitle,
+  hideHeader,
+}) => {
   return (
     <Modal
       type="center"
